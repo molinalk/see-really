@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.slider-wrapper, .slider, .carousel-slider, .carousel-root{
+    height: 100% ; 
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
