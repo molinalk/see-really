@@ -1,0 +1,84 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "title": "Comedy",
+            "description": "This category features a wide range of comedy videos, including stand-up specials, sitcoms, and comedic sketches."
+        },
+        {
+            "id": "2",
+            "title": "Drama",
+            "description": "Dive into the world of dramatic storytelling with this category, which includes gripping films, TV series, and documentaries that explore intense emotions and complex relationships."
+        },
+        {
+            "id": "3",
+            "title": "Action",
+            "description": "Get your adrenaline pumping with this category of action-packed films, TV shows, and sporting events. Experience thrilling stunts, intense fight scenes, and high-speed chases."
+        },
+        {
+            "id": "4",
+            "title": "Horror",
+            "description": "If you enjoy being scared, this category is for you. Explore a variety of horror movies, TV shows, and supernatural thrillers that will keep you on the edge of your seat."
+        },
+        {
+            "id": "5",
+            "title": "Science Fiction",
+            "description": "Immerse yourself in futuristic worlds, advanced technology, and otherworldly adventures with this category of sci-fi films, TV series, and documentaries."
+        },
+        {
+            "id": "6",
+            "title": "Fantasy",
+            "description": "Escape into realms of magic, mythical creatures, and epic quests with this category of fantasy films, TV shows, and animated features."
+        },
+        {
+            "id": "7",
+            "title": "Romance",
+            "description": "Fall in love with this category of romantic movies, TV dramas, and reality dating shows. Experience heartwarming stories and passionate relationships."
+        },
+        {
+            "id": "8",
+            "title": "Thriller",
+            "description": "Get your heart racing with this category of suspenseful films, psychological thrillers, and crime dramas. Expect unexpected twists and intense suspense."
+        },
+        {
+            "id": "9",
+            "title": "Animation",
+            "description": "Discover a world of animated wonders with this category, including animated movies, TV shows, and anime. Delight in colorful characters and imaginative storytelling."
+        },
+        {
+            "id": "10",
+            "title": "Documentary",
+            "description": "Expand your knowledge and understanding of real-life events, people, and phenomena with this category of informative and thought-provoking documentaries."
+        }
+    ],
+    "videos":[
+        {
+            "id":1,
+            "title":"Example",
+            "description":"Example description",
+            "url":"Example url",
+            "id_category":2
+        },
+        {
+            "id":2,
+            "title":"Example 2",
+            "description":"Example description 2",
+            "url":"Example url 2",
+            "id_category":5
+        },
+        {
+            "id":3,
+            "title":"Example 3",
+            "description":"Example description 3",
+            "url":"Example url 3",
+            "id_category":7
+        },
+        {
+            "id":4,
+            "title":"Example 4",
+            "description":"Example description 4",
+            "url":"Example url 4",
+            "id_category":1
+        }
+    ]
+}
