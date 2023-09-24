@@ -3,7 +3,7 @@ const BannerItem = ({ data }) => {
     const { title, description, img } = data;
     return (
         <div className="min-w-full h-full">
-            <div style={{ backgroundImage: `url(${img})` }} className="w-full h-full absolute" />
+            <div style={{ backgroundImage: `url(${img})` }} className="w-full h-full absolute bg-no-repeat bg-cover bg-center" />
             <div className="relative w-full h-full bg-black/30 bg-gradient-to-b from-black to-transparent to-50% ">
                 <div className="h-full m-auto p-4 flex flex-col justify-center items-center gap-0.5 md:w-11/12 lg:w-3/4">
                     <p className="text-white text-2xl w-full text-left font-semibold md:text-3xl lg:text-4xl" >{title}</p>
