@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
 import Banner from "../components/banner";
 import Categories from "../components/categories";
-import { Fetch } from "../api/fetch";
+import * as Api from '../api';
 const Home = () => {
     const [categories, setCategories] = useState([]);
     const [videos, setVideos] = useState([]);
     useEffect(() => {
-        const datos = [
-            fetch("http://localhost:3000/categories"),
-            fetch("http://localhost:3000/videos")
-        ];
         (async () => {
-            const [categories, videos] = await Fetch(datos);
-            setCategories(categories);
-            setVideos(videos);
+            setCategories(await Api.getCategories());
+            setVideos(await Api.getVideos());
         })();
     }, [])
     return (
