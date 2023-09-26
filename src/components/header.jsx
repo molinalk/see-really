@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../assets/logo.svg'
 const Header = () => {
     return (
-        <header className="bg-black w-full h-16 lg:h-20"> 
+        <header className="bg-black w-full h-16 lg:h-20">
             <div className="w-full h-full flex justify-center items-center px-4 py-3 m-auto md:w-11/12 md:justify-between lg:w-3/4 lg:py-4">
                 <Link className="h-4/5 relative flex after:h-full after:text-2xl after:flex after:ml-2 after:items-center after:left-full after:content-['SeeReally'] after:font-semibold after:text-white" to="/"><img className="h-full " src={logo} alt="logo" /></Link>
                 <Link className="text-white text-sm  p-2 border rounded-sm hidden font-semibold transition-colors duration-500 ease-out hover:bg-white hover:border-black hover:text-black md:text-base md:inline md:leading-none lg:px-4 lg:py-3" to="/create-video">Nuevo Video</Link>

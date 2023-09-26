@@ -4,6 +4,6 @@
 .slider-wrapper, .slider, .carousel-slider, .carousel-root{
     height: 100% ; 
 }
-.scroll::-webkit-scrollbar{
+.slider::-webkit-scrollbar{
     display: none;
 }

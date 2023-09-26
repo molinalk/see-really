@@ -5,12 +5,14 @@ import Home from "./pages/home"
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/create-video" element={<div>Create new video</div>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/create-video" element={<div><iframe className="w-full aspect-video" src="https://www.youtube.com/embed/x1Lt2rDWCKE" 
+        title="CUÁNTOS MONITORES NECESITAS para PROGRAMAR" 
+        allowfullscreen></iframe></div>} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   )
 }
