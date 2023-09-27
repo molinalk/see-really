@@ -1,5 +1,6 @@
 import Category from "./category";
 const Categories = ({ data, videos }) => {
+    
     return (
         <section className="p-4 pb-20 md:pb-4 flex flex-col gap-4">
             {

@@ -6,7 +6,7 @@ const CategoryItem = memo(({ data }) => {
             <div className="aspect-video">
                 <iframe className="w-full  h-full" id={`${data.code}`} src={`https://www.youtube.com/embed/${data.code}`} ></iframe>
             </div>
-            <p className="text-sm py-2 px-4 max-h-[52px]">{data.description}</p>
+            <p className="text-item overflow-hidden text-sm py-1.5 px-4">{data.description}</p>
         </div>
     )
 });

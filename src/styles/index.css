@@ -1,9 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 .slider-wrapper, .slider, .carousel-slider, .carousel-root{
     height: 100% ; 
 }
-.slider::-webkit-scrollbar{
+.slider-category::-webkit-scrollbar{
     display: none;
+}
+.text-item{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
