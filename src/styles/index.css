@@ -9,7 +9,7 @@
 .slider-wrapper, .slider, .carousel-slider, .carousel-root{
     height: 100% ; 
 }
-.slider-category::-webkit-scrollbar{
+:where(.slider-category,.scroll)::-webkit-scrollbar{
     display: none;
 }
 .text-item{

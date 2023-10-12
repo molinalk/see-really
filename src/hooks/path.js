@@ -4,7 +4,7 @@ const usePath = () => {
     const { pathname } = useResolvedPath();
     const [isPath, setIsPath] = useState(false);
     useEffect(() => {
-        pathname === "/create-video" ? setIsPath(!isPath) : setIsPath(!isPath);
+        pathname === "/create-video" ? setIsPath(true) : setIsPath(false);
     }, [pathname])
     return {isPath};
 }

@@ -23,6 +23,18 @@ export const getVideo = async (id) => {
     }
 }
 
+export const getVideoByCategory = async (id) => {
+    try {
+        const data = await fetch(`${url}?id_category=${id}`);
+        if (!data.ok) {
+            throw new Error('No se pudo obtener el recurso');
+        }
+        return data.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 export const newVideo = (video) => {
     fetch(url, {
         method: 'POST',

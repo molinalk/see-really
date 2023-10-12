@@ -22,3 +22,14 @@ export const getCategory=async(id)=>{
         console.error(error);
     }
 }
+export const getCategoryByName=async(name)=>{
+    try {
+        const data = await fetch(`${url}?title=${name}`);
+        if (!data.ok) {
+            throw new Error('No se pudo obtener el recurso');
+        }
+        return data.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
