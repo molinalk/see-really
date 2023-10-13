@@ -40,7 +40,7 @@ const Category = ({ videos, title }) => {
                 <div onClick={handlePreviousPosition} className={`${(scroll.slider && scroll.left > 0) ? 'visible' : 'invisible'} hidden md:inline px-2.5 py-1.5 text-2xl font-semibold font-mono  leading-none rounded-full cursor-pointer bg-slate-50 border shadow-lg shadow-black/30`}>{'<'}</div>
                 <div id={title} className="slider-category flex  gap-4 overflow-x-scroll flex-grow snap-x snap-mandatory">
                     {
-                        videos.map((video, index) => index < 8 && <CategoryItem key={index} data={video} />)
+                        videos.map((video, index) => index < 8 && <CategoryItem key={index} path={title} data={video} />)
                     }
                 </div>
                 <div onClick={handleNextPosition} className={`${(scroll.slider && scroll.left <= scroll.scrollMaxWidth - 1) ? 'visible' : 'invisible'} hidden md:inline px-2.5 py-1.5 text-2xl font-semibold font-mono  leading-none rounded-full cursor-pointer bg-slate-50 border shadow-lg shadow-black/30`}>{'>'}</div>
