@@ -17,6 +17,5 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/prop-types': 'off',
-    "react/display-name": [true, { "ignoreTranspilerName": true, "checkContextObjects": false }]
   },
 }
