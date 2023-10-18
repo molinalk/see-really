@@ -16,7 +16,7 @@ function App() {
         <Route path="/create-video" element={<NewVideo />} />
         <Route path="/create-category" element={<NewCategory />} />
         <Route path="/categories/:category" element={<Category />} />
-        <Route path="/categories/:category/video/:code" element={<Video/>} />
+        <Route path="/categories/:category/video/:code" element={<Video />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
