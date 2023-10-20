@@ -1,4 +1,5 @@
 import Category from "./category";
+import Load from "./load";
 import { useSeeReally } from "../context";
 const Categories = ({ data }) => {
     const { videos, test, setTest } = useSeeReally();
@@ -6,7 +7,9 @@ const Categories = ({ data }) => {
         <section className="p-4 max-md:pb-20 flex flex-col gap-4 m-auto w-full md:w-10/12 lg:w-4/6">
             <button onClick={() => setTest(!test)}>Test</button>
             {
-                !videos.loading && data.map(category => <Category key={category.title} title={category.title} videos={videos.data.filter(video => Number(video.id_category) === Number(category.id))} />)
+                videos.loading
+                    ? <Load />
+                    : data.map(category => <Category key={category.title} title={category.title} videos={videos.data.filter(video => Number(video.id_category) === Number(category.id))} />)
             }
         </section>
     )
