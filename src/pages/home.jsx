@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
 import Banner from "../components/banner";
 import Categories from "../components/categories";
-import * as Api from '../api';
+import Load from "../components/load";
+import { useSeeReally } from "../context";
 const Home = () => {
-    const [categories, setCategories] = useState(null);
-    useEffect(() => {
-        (async () => {
-            setCategories(await Api.getCategories());
-        })();
-    }, [])
-    return categories && (
-        categories.length > 0 &&
-        <>
-            <Banner data={categories} />
-            <Categories data={categories.map(category => ({ id: category.id, title: category.title, description: category.description }))} />
-        </>
+    const { categories } = useSeeReally();
+    return (
+        !categories.loading ?
+            <>
+                <Banner data={categories.data} />
+                <Categories data={categories.data.map(category => ({ id: category.id, title: category.title, description: category.description }))} />
+            </>
+            : <Load />
     )
 }
 export default Home;

@@ -33,7 +33,7 @@ const Category = ({ videos, title }) => {
     return videos.length > 0 && (
         <section className="flex flex-col w-full gap-4">
             <div className="w-full flex justify-between items-center">
-                <p className="font-semibold text-lg">{title}</p>
+                <p className="font-semibold text-lg first-letter:uppercase">{title}</p>
                 <Link className="text-sm lg:text-lg before:content-['Ver_todo'] flex gap-2 before:text-base before:font-semibold items-center" to={`/categories/${title}`}><i className="fa-solid fa-arrow-right"></i></Link>
             </div>
             <div className="flex items-center gap-4 px-2">

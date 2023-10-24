@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from '../assets/logo.svg';
 import usePath from "../hooks/path";
 const Header = () => {
-    const { isPath } = usePath();
+    const { isPath } = usePath("/create-video");
     return (
         <header className="bg-black w-full h-16 lg:h-20">
             <div className="w-full h-full flex justify-center items-center px-4 py-3 m-auto md:w-10/12 md:justify-between lg:w-4/6 lg:py-4">

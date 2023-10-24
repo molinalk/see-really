@@ -3,7 +3,7 @@ import Github from '../assets/github.svg'
 import LinkedIn from '../assets/linkedin.svg'
 import usePath from "../hooks/path";
 const Footer = () => {
-    const { isPath } = usePath();
+    const { isPath } = usePath("/create-video");
     return (
         <footer className="fixed bottom-0 bg-black w-full h-14 md:relative md:h-16 lg:h-20 flex justify-center items-center overflow-hidden">
             <div className="hidden h-full md:flex md:justify-center md:items-center gap-2 lg:gap-4">

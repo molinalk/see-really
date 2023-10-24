@@ -10,15 +10,15 @@ const CategoryItem = memo(({ data, category, path }) => {
     }
     const handleVideo = () => {
         sessionStorage.setItem('video', JSON.stringify(data));
-        navigate(`/categories/${path}/video/${data.id}`);
+        navigate(`/categories/${path}/video/${data.code}`);
     }
     return (
         <div className={`${category ? styles.category : styles.home} border rounded-md overflow-hidden ${isLoading && ""}`}>
             <div className="relative flex">
                 <div onClick={handleVideo} className="h-full w-full absolute cursor-pointer" />
-                <img className="h-full w-full object-cover" src={`https://i.ytimg.com/vi/${data.id}/maxresdefault.jpg`} alt={data.id} />
+                <img className="h-full w-full object-cover" src={`https://i.ytimg.com/vi/${data.code}/maxresdefault.jpg`} alt={data.code} />
             </div>
-            <p className="text-item overflow-hidden text-xs md:text-sm px-2 py-1">{data.snippet.title}</p>
+            <p className="text-item overflow-hidden text-xs md:text-sm px-2 py-1">{data.title}</p>
         </div>
     )
 });
