@@ -1,19 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#root{
+
+#root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-.slider-wrapper, .slider, .carousel-slider, .carousel-root{
-    height: 100% ; 
+
+.slider-wrapper,
+.slider,
+.carousel-slider,
+.carousel-root {
+    height: 100%;
 }
-:where(.slider-category,.scroll)::-webkit-scrollbar{
+
+:where(.slider-category, .scroll)::-webkit-scrollbar {
     display: none;
 }
-.text-item{
+
+.text-item {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+
+.text-item-banner {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
