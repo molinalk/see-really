@@ -1,7 +1,6 @@
-const Form = ({ children, className, title }) => {
+const Form = ({ children, handleSubmit, className}) => {
     return (
-        <form className={className}>
-            <p className="py-2 text-center font-semibold text-xl md:text-2xl lg:text-3lx">{title}</p>
+        <form onSubmit={handleSubmit} className={className}>
             {children}
         </form>
     )

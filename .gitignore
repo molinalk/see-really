@@ -28,3 +28,6 @@ docker-compose.yml
 Dockerfile
 
 src/firebase*.js
+.firebaserc
+.firebase
+firebase.json

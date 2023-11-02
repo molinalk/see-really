@@ -22,8 +22,6 @@ const SeeReallyProvider = ({ children }) => {
             getData("categories")
         ]
         const [listVideos, listCategories] = await Promise.all(data);
-        console.log(listVideos);
-        console.log(listCategories);
         const videos = {
             loading: false,
             data: listVideos
