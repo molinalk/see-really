@@ -32,8 +32,7 @@ const NewVideo = () => {
             description,
             category
         }
-        const response = await addData(video, "videos");
-        console.log(response);
+        await addData(video, "videos");
         setVideos({ ...videos, data: [...videos.data, video] });
         navigate("/");
     }
@@ -44,7 +43,7 @@ const NewVideo = () => {
         if (regex.test(input)) {
             const code = getCode(input);
             setCode(code);
-            const { snippet: { title, thumbnails: { standard: { url } } } } = await fetchVideo(code);
+            const { snippet: { title, thumbnails: { high : { url } } } } = await fetchVideo(code);
             setImage({ exist: true, url });
             setTitle(title);
             setOnError(false);

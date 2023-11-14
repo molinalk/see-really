@@ -11,7 +11,9 @@ const Footer = () => {
                 <a className="h-3/5 lg:h-3/6" href="http://github.com/molinalk/see-really" target="_blank" rel="noopener noreferrer me"><img className="h-full invert" src={Github} alt="Github" /></a>
                 <a className="h-3/5 lg:h-3/6" href="https://www.linkedin.com/in/kevin-molina-lazarte" target="_blank" rel="noopener noreferrer me"><img className="h-full" src={LinkedIn} alt="LinkedIn" /></a>
             </div>
-            <Link className="text-white  flex items-center justify-center text-lg w-full h-full rounded-sm font-semibold md:hidden" to={isPath ? "/create-category" : "/create-video"}>{isPath ? "Nueva Categoria" : "Nuevo Video"}</Link>
+            {
+                !isPath && (<Link className="text-white  flex items-center justify-center text-lg w-full h-full rounded-sm font-semibold md:hidden" to="/create-video">Nuevo Video</Link>)
+            }
         </footer>
     )
 }
