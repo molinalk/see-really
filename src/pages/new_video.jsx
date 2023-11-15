@@ -12,7 +12,7 @@ import { fetchVideo } from "../api/youtube/video";
 import { addData } from "../firebase";
 
 const NewVideo = () => {
-    const { categories, videos, setVideos } = useSeeReally();
+    const { categories, videos: videosMemo, setVideos } = useSeeReally();
     const categoriesName = categories.data?.map((item) => item.title);
 
     const navigate = useNavigate();
@@ -32,8 +32,14 @@ const NewVideo = () => {
             description,
             category
         }
+        const videos = {
+            loading: videosMemo.loading,
+            data: [...videosMemo.data, video]
+        }
+        
         await addData(video, "videos");
-        setVideos({ ...videos, data: [...videos.data, video] });
+        sessionStorage.setItem("videos", JSON.stringify(videos));
+        setVideos(videos);
         navigate("/");
     }
 
@@ -43,11 +49,11 @@ const NewVideo = () => {
         if (regex.test(input)) {
             const code = getCode(input);
             setCode(code);
-            const { snippet: { title, thumbnails: { high : { url } } } } = await fetchVideo(code);
+            const { snippet: { title, thumbnails: { high: { url } } } } = await fetchVideo(code);
             setImage({ exist: true, url });
             setTitle(title);
             setOnError(false);
-        }else{
+        } else {
             setOnError(true);
         }
     }

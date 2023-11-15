@@ -37,13 +37,13 @@ const Category = ({ videos, title }) => {
                 <Link className="text-sm lg:text-lg before:content-['Ver_todo'] flex gap-2 before:text-base before:font-semibold items-center" to={`/categories/${title}`}><i className="fa-solid fa-arrow-right"></i></Link>
             </div>
             <div className="flex items-center gap-4 px-2">
-                <div onClick={handlePreviousPosition} className={`${(scroll.slider && scroll.left > 0) ? 'visible' : 'invisible'} duration-300 hidden lg:inline px-2.5 py-1.5 text-2xl font-semibold font-mono  leading-none rounded-full cursor-pointer bg-slate-50 border hover:shadow-lg hover:shadow-black/30`}>{'<'}</div>
+                <div onClick={handlePreviousPosition} className={`${(scroll.slider && scroll.left > 0) ? 'visible' : 'invisible'} duration-300 hidden md:inline px-2.5 py-1.5 text-2xl font-semibold font-mono  leading-none rounded-full cursor-pointer bg-slate-50 border hover:shadow-lg hover:shadow-black/30`}>{'<'}</div>
                 <div id={title} className="slider-category flex gap-4 overflow-x-scroll flex-grow snap-x snap-mandatory">
                     {
                         videos.map((video, index) => index < 8 && <CategoryItem key={index} path={title} data={video} />)
                     }
                 </div>
-                <div onClick={handleNextPosition} className={`${(scroll.slider && scroll.left <= scroll.scrollMaxWidth - 1) ? 'visible' : 'invisible'} duration-300 hidden  lg:inline px-2.5 py-1.5 text-2xl font-semibold font-mono  leading-none rounded-full cursor-pointer bg-slate-50 border hover:shadow-lg hover:shadow-black/30`}>{'>'}</div>
+                <div onClick={handleNextPosition} className={`${(scroll.slider && scroll.left <= scroll.scrollMaxWidth - 1) ? 'visible' : 'invisible'} duration-300 hidden  md:inline px-2.5 py-1.5 text-2xl font-semibold font-mono  leading-none rounded-full cursor-pointer bg-slate-50 border hover:shadow-lg hover:shadow-black/30`}>{'>'}</div>
             </div>
         </section>
     )
