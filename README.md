@@ -22,7 +22,7 @@ See Really es una aplicación web creada con React que permite a los usuarios ve
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/molinalk/see-really
+   git clone https://github.com/kevinmolinadev/see-really
    cd see-really
    ```
 
