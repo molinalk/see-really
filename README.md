@@ -21,32 +21,37 @@ See Really es una aplicación web creada con React que permite a los usuarios ve
 ## Instrucciones de Uso
 
 1. **Clonar el Repositorio:**
+
    ```bash
    git clone https://github.com/kevinmolinadev/see-really
    cd see-really
    ```
 
 2. **Instalar Dependencias:**
+
    ```bash
    npm install
    ```
 
 3. **Configurar Firebase:**
+
    - Crea un proyecto en Firebase: [Firebase Console](https://console.firebase.google.com/)
    - Configura las credenciales de firebase en un archivo `src/firebase_config.js`
 
 4. **Iniciar la Aplicación:**
+
    ```bash
    npm start
    ```
 
 5. **Accede a la Aplicación:**
-   Abre tu navegador y visita [See Really](https://see-really.web.app)
 
+Abre tu navegador y visita [See Really](https://see-really.web.app)
 
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
+
 See Really no solo es un proyecto, sino también un viaje de aprendizaje en el que he tenido la oportunidad de adquirir nuevas habilidades y conocimientos. Desde la planificación hasta la implementación, cada paso de este proyecto ha sido una oportunidad para explorar y crecer como desarrollador.
